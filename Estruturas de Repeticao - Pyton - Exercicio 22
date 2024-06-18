@@ -1,0 +1,21 @@
+# 22 - Escreva um programa completo que permita a qualquer aluno introduzir, pelo teclado, uma sequencia
+# de notas (válidas no intervalo de 10 a 20) e que mostre na tela, como resultado, a correspondente média
+# aritmética. O número de notas com que o aluno pretende efetuar o calculo não será fornecido pelo programa,
+# o qual terminará quando for introduzido um valor que não seja válido como no de aprovação
+
+soma = 0
+quantidade = 0
+
+while True:
+    nota = float(input('Informe uma nota entre 10 e 20 ou para parar informe um nota fora do intervalo: '))
+
+    if nota < 10 or nota > 20:
+        break
+
+    else:
+        quantidade = quantidade + 1
+        soma = soma + nota
+
+    media = soma / quantidade
+
+print(f'A média foi de {media}')
